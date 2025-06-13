@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff922b, #ffa94d);
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .form-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        max-width: 700px;
+        width: 90%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 13px;
+        color: gray;
+        margin-bottom: 25px;
+      }
+
+      .form-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .form-row label.label-text {
+        width: 220px;
+        text-align: right;
+        margin-right: 15px;
+        font-weight: bold;
+        padding-top: 5px;
+      }
+
+      .form-row input[type="text"],
+      .form-row input[type="email"],
+      .form-row input[type="number"],
+      .form-row select,
+      .form-row textarea {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-row textarea {
+        resize: vertical;
+      }
+
+      .form-row .input-group {
+        flex: 1;
+      }
+
+      .form-row .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: normal;
+      }
+
+      .form-row .input-group input[type="checkbox"],
+      .form-row .input-group input[type="radio"] {
+        margin-right: 8px;
+        transform: translateY(1px);
+      }
+
+      .submit-btn {
+        width: 100%;
+        background-color: #ffa94d;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+
+      .submit-btn:hover {
+        background-color: #ff922b;
+      }
+
+      @media (max-width: 600px) {
+        .form-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .form-row label.label-text {
+          text-align: left;
+          width: 100%;
+          margin-bottom: 5px;
+        }
+
+        .form-row .input-group label {
+          margin-bottom: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Survey Form</h2>
+      <p>User stories survey form</p>
+      <form>
+        <div class="form-row">
+          <label class="label-text" for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Name"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <label class="label-text" for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter E-Mail"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <label class="label-text" for="experience">Work Experience:</label>
+          <input
+            type="number"
+            id="experience"
+            name="experience"
+            placeholder="Enter Number"
+            min="0"
+          />
+        </div>
+
+        <div class="form-row">
+          <label class="label-text" for="comfort"
+            >Comfortable investing without investigating?</label
+          >
+          <select id="comfort" name="comfort">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="label-text" for="suggestions"
+            >Suggestions to build trusted platform:</label
+          >
+          <textarea id="suggestions" name="suggestions" rows="3"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label class="label-text">You're ready to invest in:</label>
+          <div class="input-group">
+            <label
+              ><input type="checkbox" name="invest" value="Real Estate" /> Real
+              Estate</label
+            >
+            <label
+              ><input type="checkbox" name="invest" value="Mutual Funds" />
+              Mutual Funds</label
+            >
+            <label
+              ><input type="checkbox" name="invest" value="Crypto Currency" />
+              Crypto Currency</label
+            >
+            <label
+              ><input type="checkbox" name="invest" value="Stocks & Bonds" />
+              Stocks & Bonds</label
+            >
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="label-text">Are you ready for further contact:</label>
+          <div class="input-group">
+            <label><input type="radio" name="contact" value="Yes" /> Yes</label>
+            <label><input type="radio" name="contact" value="No" /> No</label>
+          </div>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
