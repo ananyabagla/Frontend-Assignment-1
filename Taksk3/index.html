@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="toggle">
+      <span class="icon">🌞</span>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+      <span class="icon">🌙</span>
+    </div>
+
+    <div class="container">
+      <!-- Left Section -->
+      <div class="left">
+        <h1>Welcome to the <span>Frontend Quiz!</span></h1>
+        <p>Pick a subject to get started.</p>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right">
+        <div class="subjects">
+          <button class="subject">
+            <img
+              src="https://img.icons8.com/color/48/html-5--v1.png"
+              alt="HTML"
+            />
+            <span>HTML</span>
+          </button>
+          <button class="subject">
+            <img src="https://img.icons8.com/color/48/css3.png" alt="CSS" />
+            <span>CSS</span>
+          </button>
+          <button class="subject">
+            <img
+              src="https://img.icons8.com/color/48/javascript--v1.png"
+              alt="JavaScript"
+            />
+            <span>JavaScript</span>
+          </button>
+          <button class="subject">
+            <img
+              src="https://img.icons8.com/color/48/universal-access.png"
+              alt="Accessibility"
+            />
+            <span>Accessibility</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("light-theme");
+      });
+    </script>
+  </body>
+</html>
